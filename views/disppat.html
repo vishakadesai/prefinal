@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Blood Donation-Patients</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+		
+	</head>
+	<body>
+		<header class="head1">
+				<h1>Patients</h1>
+		</header>
+		<table class="table table-hover">
+			<thead>
+			  <tr>
+                <th>Patient Id</th> 
+				<th>First Name</th>
+                <th>Last Name</th>
+                <th>Blood Group</th>
+                <th>Blood Amount</th>
+                <th>Contact</th>
+                <th>Address</th>
+                <th>Email</th>
+			  </tr>
+			</thead>
+			<tbody>
+				  <% disppat.forEach(function(pat) { %>
+			  <tr>
+                <td><%= pat.pid %></td>	  
+                <td><%= pat.pfname %></td>
+                <td><%= pat.plname %></td>
+                <td><%= pat.pbgroup %></td>
+                <td><%= pat.pbloodamt %></td>
+                <td><%= pat.pphone %></td>
+                <td><%= pat.paddr %></td>
+                <td><%= pat.pemail %></td>
+				 
+				
+			  </tr>
+			  <% }); %>
+		   </tbody>
+		   </table>
+					
+		
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Blood Donation-Patients</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+		
+	</head>
+	<body>
+		<header class="head1">
+				<h1>Patients</h1>
+		</header>
+		<table class="table table-hover">
+			<thead>
+			  <tr>
+                <th>Donor Id</th> 
+				<th>First Name</th>
+                <th>Last Name</th>
+                <th>Date Of Birth</th>
+                <th>Gender</th>
+                <th>Weight</th>
+                <th>Blood Group</th>
+                <th>Contact</th>
+                <th>Address</th>
+                <th>Email</th>
+			  </tr>
+			</thead>
+			<tbody>
+				  <% dispdon.forEach(function(don) { %>
+			  <tr>
+                
+                <td><%= don.did %></td>
+                <td><%= don.dfname %></td>
+                <td><%= don.dlname %></td>
+                <td><%= don.ddob %></td>
+                <td><%= don.dgender %></td>
+                <td><%= don.dwt %></td>
+                <td><%= don.dbgroup %></td>
+                <td><%= don.dphone %></td>
+                <td><%= don.daddr %></td>
+                <td><%= don.demail %></td>
+                
+				 
+				
+			  </tr>
+			  <% }); %>
+		   </tbody>
+		   </table>
+					
+		
+	</body>
+</html>
